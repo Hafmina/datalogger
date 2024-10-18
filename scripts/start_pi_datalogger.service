@@ -1,0 +1,12 @@
+[Unit]
+Description=Start python dataloger software
+
+[Service]
+Type=exec
+WorkingDirectory=/home/haf/projects/datalogger
+ExecStart=python /home/haf/projects/datalogger/source/main.py
+Restart=on-failure
+Environment="PATH=/home/haf/projects/datalogger/.venv/bin:/usr/bin"
+
+[Install]
+WantedBy=multi-user.target
